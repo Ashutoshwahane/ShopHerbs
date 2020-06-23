@@ -1,14 +1,14 @@
-package com.omkar.shopherb.activity.ui.gallery;
+package com.omkar.shopherb.activity.ui.shop;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class ShopViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ShopViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is gallery fragment");
     }

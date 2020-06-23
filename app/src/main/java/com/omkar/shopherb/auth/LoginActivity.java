@@ -48,10 +48,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         signup.setOnClickListener(this);
 
-
-
-
-
     }
 
     private void firebaseauth(String email_text, String password_text) {

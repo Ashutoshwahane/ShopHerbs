@@ -11,7 +11,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Shop</string>
-    <string name="menu_slideshow">Search</string>
+    <string name="menu_slideshow">Order</string>
 
     <string name="home_second">Home Second</string>
 </resources>

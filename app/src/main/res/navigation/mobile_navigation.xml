@@ -31,13 +31,13 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.omkar.shopherb.activity.ui.gallery.GalleryFragment"
+        android:name="com.omkar.shopherb.activity.ui.shop.ShopFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_shop" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.omkar.shopherb.activity.ui.slideshow.SlideshowFragment"
+        android:name="com.omkar.shopherb.activity.ui.order.OrderFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_order" />
 </navigation>

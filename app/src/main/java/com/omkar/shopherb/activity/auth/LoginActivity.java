@@ -1,4 +1,4 @@
-package com.omkar.shopherb.auth;
+package com.omkar.shopherb.activity.auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onClick(View v) {
                 String email_text = email.getText().toString();
                 String password_text = password.getText().toString();
-                firebaseauth(email_text,password_text);
+                firebaseAuth(email_text,password_text);
             }
         });
 
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
-    private void firebaseauth(String email_text, String password_text) {
+    private void firebaseAuth(String email_text, String password_text) {
         auth.signInWithEmailAndPassword(email_text, password_text)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

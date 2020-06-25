@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,40 +39,37 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         password = findViewById(R.id.password);
         auth = FirebaseAuth.getInstance();
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email_text = email.getText().toString();
-                String password_text = password.getText().toString();
-                firebaseAuth(email_text,password_text);
-            }
-        });
-
+        login.setOnClickListener(this);
         signup.setOnClickListener(this);
 
     }
 
-    private void firebaseAuth(String email_text, String password_text) {
-        auth.signInWithEmailAndPassword(email_text, password_text)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            Log.d("loginDebug","SignInWithEmail Successful");
-                            FirebaseUser user = auth.getCurrentUser();
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                            finish();
-                        }
-                    }
-                });
-    }
-
     @Override
     public void onClick(View v) {
-        if ( R.id.signupheretextView == v.getId()) {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
-            finish();
+        switch (v.getId()){
+            case R.id.loginButton :
+                String email_txt = email.getText().toString();
+                String password_txt = password.getText().toString();
+                loginUser(email_txt,password_txt);
+                break;
+
+
+            case R.id.signupheretextView :
+                Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(i);
+                break;
+
         }
+    }
+
+    private void loginUser(String email_txt, String password_txt) {
+        auth.signInWithEmailAndPassword(email_txt, password_txt).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                Toast.makeText(LoginActivity.this, "Login Succesful", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

@@ -22,9 +22,6 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView usertxt;
-    private FirebaseAuth auth;
-
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -34,10 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
-        usertxt = findViewById(R.id.UsertextView);
-        FirebaseUser user = auth.getCurrentUser();
-        String username = user.getDisplayName();
-        usertxt.setText(username);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

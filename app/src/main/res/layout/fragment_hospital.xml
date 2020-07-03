@@ -1,243 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appcolor"
     android:orientation="vertical"
     tools:context=".activity.ui.HospitalFragment">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_margin="10dp"
             >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/shopping"
-                />
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
+                android:id="@+id/searchHospitalEditText"
+                android:layout_margin="14dp"
+                android:hint="Search Hospital"
                 />
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
+                android:id="@+id/searchHospitalButton"
+                android:layout_margin="14dp"
+                android:text="Search"
                 />
-            <TextView
-                android:layout_width="wrap_content"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:gravity="end"
-                android:layout_margin="10dp"
+                android:id="@+id/recycleViewHospital"
+                android:background="#ffffff"
+                android:layout_margin="14dp"
+                tools:listitem="@layout/hospital_items"
+                tools:itemCount="9"
                 />
 
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/shopping2"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:gravity="end"
-                android:layout_margin="10dp"
-                />
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/shopping1"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:gravity="end"
-                android:layout_margin="10dp"
-                />
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/shopping"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:gravity="end"
-                android:layout_margin="10dp"
-                />
-
-
-        </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
 </FrameLayout>

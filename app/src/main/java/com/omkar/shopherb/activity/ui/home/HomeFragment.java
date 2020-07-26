@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.hospital_button : {
                 HospitalFragment hospitalFragment = new HospitalFragment();
-                MainActivity mainActivity = (MainActivity) getActivity();
+                assert getFragmentManager() != null;
                 getFragmentManager().beginTransaction().replace(R.id.homeframelayout,hospitalFragment).commit();
 
             }

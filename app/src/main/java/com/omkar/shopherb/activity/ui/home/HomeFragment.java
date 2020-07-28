@@ -14,9 +14,8 @@ import com.omkar.shopherb.R;
 import com.omkar.shopherb.activity.MainActivity;
 import com.omkar.shopherb.activity.ui.HospitalFragment;
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment {
 
-    Button hospitalButton;
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -25,8 +24,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        hospitalButton = root.findViewById(R.id.hospital_button);
-        hospitalButton.setOnClickListener(this);
 
 
 
@@ -37,16 +34,4 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         return root;
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.hospital_button : {
-                HospitalFragment hospitalFragment = new HospitalFragment();
-                assert getFragmentManager() != null;
-                getFragmentManager().beginTransaction().replace(R.id.homeframelayout,hospitalFragment).commit();
-
-            }
-        }
-
     }
-}

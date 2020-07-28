@@ -28,6 +28,7 @@
                 android:hint="Search Hospital"
                 />
             <Button
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/searchHospitalButton"
@@ -35,14 +36,12 @@
                 android:text="Search"
                 />
 
-            <androidx.recyclerview.widget.RecyclerView
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/recycleViewHospital"
                 android:background="#ffffff"
                 android:layout_margin="14dp"
-                tools:listitem="@layout/hospital_items"
-                tools:itemCount="9"
                 />
 
 

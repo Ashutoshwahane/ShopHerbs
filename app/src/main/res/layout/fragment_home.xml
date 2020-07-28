@@ -9,174 +9,41 @@
     android:background="@color/appcolor"
     tools:context=".activity.ui.home.HomeFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:text="Welcome to ShopHerb App"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
+        android:padding="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/shopping"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/item1Image"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item1Image"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="40dp"
-            android:textColor="#ffffff"
-            android:text="Herb fresh"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/item1name"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item1name"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@color/appcolor"
-            android:text="buy now"
-            android:layout_marginTop="10dp"
-            android:id="@+id/button1"
-            />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/shopping2"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/photo"
+            android:layout_width="388dp"
+            android:layout_height="617dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/home1"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/item2Image"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item1Image"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="40dp"
-            android:textColor="#ffffff"
-            android:text="Herb fresh"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/item2name"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item1name"
-            android:layout_marginRight="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/appcolor"
-            android:text="buy now"
-            android:layout_marginTop="10dp"
-            android:id="@+id/button2"
-            />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/shopping"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@id/button1"
             app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/item3Image"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item3Image"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="40dp"
-            android:textColor="#ffffff"
-            android:text="Herb fresh"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/item3name"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item3name"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@color/appcolor"
-            android:text="buy now"
-            android:layout_marginTop="10dp"
-            android:id="@+id/button3"
-            />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/shopping2"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@id/button2"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/item4Image"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item4Image"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="40dp"
-            android:textColor="#ffffff"
-            android:text="Herb fresh"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/item4name"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item4name"
-            android:layout_marginRight="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/appcolor"
-            android:text="buy now"
-            android:layout_marginTop="10dp"
-            android:id="@+id/button4"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/hospital_button"
-            app:layout_constraintTop_toBottomOf="@id/button4"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="20dp"
-            android:background="@color/appcolor"
-            android:text="@string/hospitals_near_you"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Disease"
-            app:layout_constraintTop_toBottomOf="@id/hospital_button"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="20dp"
-            android:background="@color/appcolor"
-            android:text="Disease"
-            />
+            app:layout_constraintTop_toBottomOf="@id/homeTitle" />
 
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-    </FrameLayout>
+</FrameLayout>
 
